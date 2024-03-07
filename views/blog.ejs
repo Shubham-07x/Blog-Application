@@ -1,0 +1,34 @@
+<%- include('partials/header') %>
+
+ <div id="main-blog-container">
+
+        <div class="conatiner-blog" id="blog-container">
+            <h1>Blog</h1>
+            <% if (blogPosts.length> 0) { %>
+                <% blogPosts.forEach(post=> { %>
+                    <div class="post">
+                        <h2>
+                            <%= post.title %>
+                        </h2>
+                        <p>
+                            <%= post.content %>
+                        </p>
+                    </div>
+                    <div style="display: flex;">
+                        <form action="/edit-post/<%= post.id %>" method="GET">
+                            <button type="submit">Edit</button>
+                        </form>
+                        <form action="/delete-post/<%= post.id %>" method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
+
+                    <% }); %>
+                        <% } else { %>
+                            <p>No blog posts available.</p>
+                            <% } %>
+        </div>
+        <a href="/back" class="back-button " type="back" value="Back to home">back</a>
+    </div>
+
+<%- include('partials/footer') %>
