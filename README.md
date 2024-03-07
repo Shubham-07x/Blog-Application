@@ -33,6 +33,6 @@ node index.js
 ## Contact
 
 - Email: as4242173@gmail.com
-- GitHub: [Your GitHub Profile](https://github.com/Shubham-07x)
+- GitHub: (https://github.com/Shubham-07x)
 
 ---
